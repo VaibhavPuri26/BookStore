@@ -1,0 +1,14 @@
+.navbar{
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+background-color: transparent;
+font-size: 32px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    background-color: aqua;
+    left: 10%;
+}
