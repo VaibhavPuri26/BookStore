@@ -7,7 +7,7 @@ import PaymentPage from './Components/PaymentPage';
 
 const cardData = [
   { url: 'https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg', text: 'To Kill a Mockingbird', price: '500' },
-  { url: 'https://m.media-amazon.com/images/I/91n3sOVJ23L._AC_UF1000,1000_QL80_.jpg', text: 'A Tree Grows in Brooklyn', price: '500' },
+  { url: 'https://m.media-amazon.com/images/I/91n3sOVJ23L._AC_UF1000,1000_QL80_.jpg', text: 'A Tree Grows in Brooklyn', price: '5000' },
   { url: 'https://m.media-amazon.com/images/I/618kJT0ZgUL._AC_UF1000,1000_QL80_.jpg', text: 'The Book Thief', price: '500' },
   { url: 'https://m.media-amazon.com/images/I/91D4YvdC0dL._AC_UF1000,1000_QL80_.jpg', text: 'Brave New World', price: '500' },
   { url: 'https://m.media-amazon.com/images/I/91ikNi3cYUL._AC_UF1000,1000_QL80_.jpg', text: 'The Underground Railroad Book', price: '500' },

@@ -27,7 +27,7 @@ function Description() {
       <h1>{text}</h1>
       <p>{description}</p>
       <p><strong>Price:</strong> {price}</p>
-      <button className='grow button' onClick={handleBuyNow}><b>Buy Now</b></button>
+      <button onClick={handleBuyNow}>Buy Now</button>
     </div>
   );
 }

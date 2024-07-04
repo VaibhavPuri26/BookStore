@@ -6,7 +6,7 @@ import './PaymentPage.css';
 
 const stripePromise = loadStripe('pk_test_51PYMucHeiRi43L6nwn9UoJrbZif9UBqK2dxaPT6zLyBiKjgRThFtXMUa28suvhUH5Ib7A4z3GGfL0AzHAEUf7k3o00WWeW2TWH');
 
-function CheckoutForm({ bookTitle }) {
+function CheckoutForm({ bookTitle, bookPrice }) {
   const stripe = useStripe();
   const elements = useElements();
   const [errorMessage, setErrorMessage] = useState(null);
@@ -35,7 +35,7 @@ function CheckoutForm({ bookTitle }) {
       const response = await fetch('http://localhost:3001/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ bookTitle }),
+        body: JSON.stringify({ bookPrice }), // Pass the bookPrice
       });
 
       if (!response.ok) {
@@ -78,13 +78,13 @@ function CheckoutForm({ bookTitle }) {
 
 function PaymentPage() {
   const location = useLocation();
-  const { bookTitle } = location.state;
+  const { bookTitle, bookPrice } = location.state;
 
   return (
     <div className="payment-page">
       <h1>Payment for {bookTitle}</h1>
       <Elements stripe={stripePromise}>
-        <CheckoutForm bookTitle={bookTitle} />
+        <CheckoutForm bookTitle={bookTitle} bookPrice={bookPrice} />
       </Elements>
     </div>
   );
